@@ -8,10 +8,11 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    <a class="<?= urlIs('/') ? 'nav-link active' : 'nav-link' ?>" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="create.php">Create</a>
+                    <a class="<?= urlIs('/create.php') ? 'nav-link active' : 'nav-link' ?>" aria-current="page"
+                        href="/create.php">Create</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Pricing</a>
