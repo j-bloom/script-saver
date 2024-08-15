@@ -3,7 +3,7 @@
 <div class="p-5">
     <h1>Scripts</h1>
 
-    <a href="/create.php" class="btn btn-secondary mt-2 mb-2">Create new Script</a>
+    <a href="/create" class="btn btn-secondary mt-2 mb-2">Create new Script</a>
     <table class="table">
         <thead>
             <tr>
@@ -17,16 +17,16 @@
         </thead>
         <tbody>
             <?php foreach ($scripts as $i => $script) : ?>
-            <tr>
-                <th scope="row"><?= $i + 1 ?></th>
-                <td><?= htmlspecialchars($script['description']) ?></td>
-                <td><?= htmlspecialchars($script['language']) ?></td>
-                <td><?= htmlspecialchars($script['development_type']) ?></td>
-                <td><?= htmlspecialchars($script['task_type']) ?></td>
-                <td>
-                    <a href="#" class="btn btn-success">View</a>
-                </td>
-            </tr>
+                <tr>
+                    <th scope="row"><?= $i + 1 ?></th>
+                    <td><?= htmlspecialchars($script['description']) ?></td>
+                    <td><?= htmlspecialchars($script['language']) ?></td>
+                    <td><?= htmlspecialchars($script['development_type']) ?></td>
+                    <td><?= htmlspecialchars($script['task_type']) ?></td>
+                    <td>
+                        <a href="#" class="btn btn-success">View</a>
+                    </td>
+                </tr>
             <?php endforeach; ?>
         </tbody>
     </table>

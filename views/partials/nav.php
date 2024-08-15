@@ -11,8 +11,8 @@
                     <a class="<?= urlIs('/') ? 'nav-link active' : 'nav-link' ?>" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="<?= urlIs('/create.php') ? 'nav-link active' : 'nav-link' ?>" aria-current="page"
-                        href="/create.php">Create</a>
+                    <a class="<?= urlIs('/create') ? 'nav-link active' : 'nav-link' ?>" aria-current="page"
+                        href="/create">Create</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Pricing</a>
