@@ -13,4 +13,4 @@ $scripts = $statement->fetchAll(PDO::FETCH_ASSOC);
 // echo '</pre>';
 // 
 
-require('index.view.php');
+require('views/index.view.php');
