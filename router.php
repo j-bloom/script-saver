@@ -7,6 +7,8 @@ $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 //Create a lookup table of key-value pairs for each route
 $routes = [
     '/' => 'controllers/index.php',
+    '/scripts' => 'controllers/scripts.php',
+    '/script' => 'controllers/script.php',
     '/create' => 'controllers/create.php',
 ];
 
