@@ -1,7 +1,8 @@
 <?php
 
-$dsn = "mysql:host=localhost;port=3306;dbname=script_saver;user=root;password=;charset=utf8mb4";
-$pdo = new PDO($dsn);
+$config = require('config.php');
+
+$db = new Database($config['database'], $config['database']['user'], $config['database']['password']);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -11,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $development_type = $_POST['developmentSelect'] ?? '';
     $task_type = $_POST['taskSelect'] ?? '';
 
-    $statement = $pdo->prepare("INSERT INTO scripts(description, script, language, development_type, task_type) 
+    $statement = $db->query("INSERT INTO scripts(description, script, language, development_type, task_type) 
                             VALUES(:description, :script, :language, :development_type, :task_type)");
 
     $statement->bindValue(':description', $description);
