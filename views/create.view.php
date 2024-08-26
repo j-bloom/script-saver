@@ -32,7 +32,7 @@
                             Typescript</option>
                     </select>
                     <?php if (isset($errors['languageSelect'])) : ?>
-                    <p class="text-danger"><?= $errors['languageSelect'] ?></p>
+                        <p class="text-danger"><?= $errors['languageSelect'] ?></p>
                     <?php endif; ?>
 
                 </div>
@@ -58,7 +58,7 @@
                             SQL</option>
                     </select>
                     <?php if (isset($errors['developmentSelect'])) : ?>
-                    <p class="text-danger"><?= $errors['developmentSelect'] ?></p>
+                        <p class="text-danger"><?= $errors['developmentSelect'] ?></p>
                     <?php endif; ?>
 
                 </div>
@@ -88,7 +88,7 @@
                     </select>
 
                     <?php if (isset($errors['taskSelect'])) : ?>
-                    <p class="text-danger"><?= $errors['taskSelect'] ?></p>
+                        <p class="text-danger"><?= $errors['taskSelect'] ?></p>
                     <?php endif; ?>
 
 
@@ -107,7 +107,7 @@
                             value="<?= $_POST['description'] ?? '' ?>">
 
                         <?php if (isset($errors['description'])) : ?>
-                        <p class="text-danger"><?= $errors['description'] ?></p>
+                            <p class="text-danger"><?= $errors['description'] ?></p>
                         <?php endif; ?>
                     </div>
 
@@ -117,13 +117,14 @@
                             id="script" required><?= $_POST['script'] ?? '' ?></textarea>
 
                         <?php if (isset($errors['script'])) : ?>
-                        <p class="text-danger"><?= $errors['script'] ?></p>
+                            <p class="text-danger"><?= $errors['script'] ?></p>
                         <?php endif; ?>
 
                     </div>
-                    <div class="d-grid gap-2 d-md-flex justify-content-end">
+                    <span class="d-flex justify-content-end">
+                        <a href="/scripts" class="btn btn-secondary mx-3">Cancel</a>
                         <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
+                    </span>
                 </div>
             </div>
         </div>

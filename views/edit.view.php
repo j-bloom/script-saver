@@ -104,9 +104,10 @@
                         <?php endif; ?>
 
                     </div>
-                    <div class="d-grid gap-2 d-md-flex justify-content-end">
+                    <span class="d-flex justify-content-end">
+                        <a href="/scripts" class="btn btn-secondary mx-3">Cancel</a>
                         <button type="submit" class="btn btn-primary">Update</button>
-                    </div>
+                    </span>
                 </div>
             </div>
         </div>

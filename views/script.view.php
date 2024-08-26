@@ -14,14 +14,14 @@
             <p class="card-text">Language: <?= htmlspecialchars($script['language']) ?></p>
             <p class="card-text">Development Type: <?= htmlspecialchars($script['development_type']) ?></p>
             <p class="card-text">Task: <?= htmlspecialchars($script['task_type']) ?></p>
-            <a href="/edit?id=<?= $script['id'] ?>" class="btn btn-secondary mx-3">Edit</a>
-            <form method="POST" action="/delete">
-                <div class="d-flex justify-content-end">
+            <span class="d-flex justify-content-end">
+                <a href="/edit?id=<?= $script['id'] ?>" class="btn btn-secondary mx-3">Edit</a>
+                <form method="POST" action="/delete">
                     <input type="hidden" name="_method" value="DELETE">
                     <input type="hidden" name="id" value="<?= $script['id'] ?>">
                     <button type="submit" class="btn btn-danger">Delete</button>
-                </div>
-            </form>
+                </form>
+            </span>
         </div>
     </div>
 </div>
