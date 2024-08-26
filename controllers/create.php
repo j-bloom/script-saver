@@ -38,16 +38,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (empty($errors)) {
         $statement = $db->query("INSERT INTO scripts(description, script, language, development_type, task_type) 
-                            VALUES(:description, :script, :language, :development_type, :task_type)");
+                            VALUES(:description, :script, :language, :development_type, :task_type)", [
+            ':description' => $description,
+            ':script' => $script,
+            ':language' => $language,
+            ':development_type' => $development_type,
+            ':task_type' => $task_type,
+        ]);
 
-        $statement->bindValue(':description', $description);
-        $statement->bindValue(':script', $script);
-        $statement->bindValue(':language', $language);
-        $statement->bindValue(':development_type', $development_type);
-        $statement->bindValue(':task_type', $task_type);
-
-        header('Location: index.php');
-        $statement->execute();
+        header('Location: /scripts');
     }
 }
 
