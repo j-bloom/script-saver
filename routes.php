@@ -6,5 +6,6 @@ return [
     '/scripts' => 'controllers/scripts.php',
     '/script' => 'controllers/script.php',
     '/create' => 'controllers/create.php',
+    '/edit' => 'controllers/edit.php',
     '/delete' => 'controllers/delete.php',
 ];

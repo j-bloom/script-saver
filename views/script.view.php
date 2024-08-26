@@ -14,6 +14,7 @@
             <p class="card-text">Language: <?= htmlspecialchars($script['language']) ?></p>
             <p class="card-text">Development Type: <?= htmlspecialchars($script['development_type']) ?></p>
             <p class="card-text">Task: <?= htmlspecialchars($script['task_type']) ?></p>
+            <a href="/edit?id=<?= $script['id'] ?>" class="btn btn-secondary mx-3">Edit</a>
             <form method="POST" action="/delete">
                 <div class="d-flex justify-content-end">
                     <input type="hidden" name="_method" value="DELETE">
